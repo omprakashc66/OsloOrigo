@@ -21,8 +21,8 @@ stationInOperationResponse = requests.get(apiEndPoint + 'stations', headers=head
 stationAvilabilityResponse = requests.get(apiEndPoint + 'stations/availability', headers=header)
 
 # get the status_code of the request
-isSIOR_valid = stationInOperationResponse.status_code
-isSAR_valid = stationAvilabilityResponse.status_code
+isSIOR_valid = stationInOperationResponse.status_code # SIOR = short for station in operation response
+isSAR_valid = stationAvilabilityResponse.status_code # SAR = short for station availability response
 
 # Proceed if the response is successful
 if isSIOR_valid == 200 & isSAR_valid == 200: # 200 = all ok
